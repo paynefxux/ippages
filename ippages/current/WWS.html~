@@ -104,19 +104,6 @@ display: none;
 <label> <input type="text" id="VFP" style="display: none;" /> </label> <input id="signme" type="submit" name="subscribe" value="Sign me up!" /></div>
 </form>
 <div class="stip">NOTE: Promo code cannot be combined with other promotions or promo codes and is not valid for nail polish or gift cards. Promo code does not include shipping, may not be applied to previous purchases, and has no cash value. Wine Women &amp; Shoes promo codes are limited to one per individual and household and are not transferrable. Entering your email here will add your name to our email list. You may unsubscribe at any time.</div>
-<script>
-  function formEval() {
-  var formName = document.mc-embedded-subscribe-form;
-  console.log(formName);
-  var emfm = formName.mce-EMAIL;
-  var fnfm = formName.mce-FNAME;
-  var lnfm = formName.mce-LNAME;
-  var lcfm = formName.mce-LOCATION;
-  console.log(emfm + fnfm + lnfm + lcfm);
-  }
-  formEval();
-</script>
-
 </div>
 </div>
 </div>
