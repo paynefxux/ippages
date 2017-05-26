@@ -90,12 +90,12 @@ display: none;
 <div id="mc_embed_signup">
 <div class="insidebox">
 <p>Subscribe to our email list to receive your personalized code to spend on fashion jewelry!</p>
-<form class="center validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" action="https://inpink.us2.list-manage.com/subscribe/post?u=da92aafc798ac80e5e32bc92c&amp;id=48ed9eac65">
+<form class="center validate" method="post" id="mcembeddedsubscribeform" name="mcembeddedsubscribeform" action="https://inpink.us2.list-manage.com/subscribe/post?u=da92aafc798ac80e5e32bc92c&amp;id=48ed9eac65">
 <div class="mc-field-group">
 <ol>
-<li><label for="mce-FNAME">First Name: <input type="text" value="" name="MERGE1" id="mce-FNAME" /> </label> <label for="mce-LNAME">Last Name: <input type="text" value="" name="MERGE2" id="mce-LNAME" /> </label> <label for="mce-EMAIL">Email Address: <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" autofocus="" /> </label></li>
-<li><label for="mce-LOCATION">Event Location: </label>
-<select name="LOCATION" class="required" id="mce-LOCATION">
+<li><label for="mce-FNAME">First Name: <input type="text" value="" name="MERGE1" id="mceFNAME" /> </label> <label for="mceLNAME">Last Name: <input type="text" value="" name="MERGE2" id="mceLNAME" /> </label> <label for="mceEMAIL">Email Address: <input type="email" value="" name="EMAIL" class="required email" id="mceEMAIL" autofocus="" /> </label></li>
+<li><label for="mceLOCATION">Event Location: </label>
+<select name="LOCATION" class="required" id="mceLOCATION">
 <option value="Cincinnati, OH">Cincinnati, OH</option>
 <option value="Pleasant Hill, CA">Pleasant Hill, CA</option>
 </select>
@@ -106,10 +106,25 @@ display: none;
 <div class="stip">NOTE: Promo code cannot be combined with other promotions or promo codes and is not valid for nail polish or gift cards. Promo code does not include shipping, may not be applied to previous purchases, and has no cash value. Wine Women &amp; Shoes promo codes are limited to one per individual and household and are not transferrable. Entering your email here will add your name to our email list. You may unsubscribe at any time.</div>
 <script>
   function formEval() {
-  var formName = document.mc-embedded-subscribe-form;
+  var formName = document.mcembeddedsubscribeform;
   console.log(formName);
+  var emfm = formName.mceEMAIL;
+  var fnfm = formName.mceFNAME;
+  var lnfm = formName.mceLNAME;
+  var lcfm = formName.mceLOCATION;
+  console.log(emfm + fnfm + lnfm + lcfm);
+  if(!emfm.value){
+      alert("Please enter your email.");
+      return false;
   }
-  formEval();
+  else{
+      formName.submit();
+  }
+  }
+  $('#mcembeddedsubscribeform').submit(function(event){
+      event.preventDefault();
+      formEval();
+  });
 </script>
 
 </div>
